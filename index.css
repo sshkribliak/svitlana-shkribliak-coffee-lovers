@@ -1,0 +1,55 @@
+body {
+    background-color: #eedcca;
+}
+
+#coffee-types {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.main-header {
+    background-color: #3e2c23;
+    color: #fffbea;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-family: 'Georgia', serif;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.main-header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #e0d7c7;
+    font-style: italic;
+}
+
+@media (max-width: 1024px) {
+    #coffee-types {
+        grid-template-columns: 1fr 1fr;
+    }
+
+        .main-header h1 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #coffee-types {
+        grid-template-columns: 1fr;
+    }
+
+    .main-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .main-header p {
+        font-size: 1rem;
+    }
+}
+
