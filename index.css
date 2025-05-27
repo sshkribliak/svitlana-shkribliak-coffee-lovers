@@ -2,6 +2,10 @@ body {
     background-color: #eedcca;
 }
 
+p {
+    font-family: 'Georgia', serif;
+}
+
 #coffee-types {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -9,8 +13,43 @@ body {
     padding: 20px;
 }
 
+#coffee-image {
+    max-width: 75%;
+    height: auto;
+    border-radius: 30px 15px;
+    border: 1px solid #c19e79;
+    box-shadow: 0 6px 12px #604427;
+    cursor: pointer;
+}
+
+#coffee-image:hover {
+    transform: scale(1.05);
+}
+
+#information {
+    max-width: 75%;
+    height: auto;
+    text-align: justify;
+}
+
+#back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6b4837;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#back-button:hover {
+    background-color: #6b3f3f;
+    transform: scale(1.05);
+}
+
 .main-header {
-    background-color: #3e2c23;
+    background-color: #6b4837;
     color: #fffbea;
     text-align: center;
     padding: 2rem 1rem;
@@ -34,7 +73,7 @@ body {
         grid-template-columns: 1fr 1fr;
     }
 
-        .main-header h1 {
+    .main-header h1 {
         font-size: 1rem;
     }
 }
@@ -51,5 +90,11 @@ body {
     .main-header p {
         font-size: 1rem;
     }
-}
 
+    #back-button {
+        display: block;
+        margin: 10px auto;
+        padding: 12px 24px;
+        font-size: 1.1em;
+    }
+}
