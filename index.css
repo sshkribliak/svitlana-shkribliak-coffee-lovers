@@ -19,6 +19,10 @@ p {
     place-items: center;
 }
 
+#coffeeTitle {
+    font-weight: 700;
+}
+
 #coffee-image {
     max-width: 65%;
     height: auto;
@@ -32,6 +36,14 @@ p {
 
 #coffee-image:hover {
     transform: scale(1.05);
+}
+
+#description-header {
+    font-weight: 700;
+}
+
+#description {
+    font-size: 1.4rem;
 }
 
 #overlay {
@@ -106,23 +118,12 @@ p {
     #coffee-types {
         grid-template-columns: 1fr 1fr;
     }
-    #coffee-image{
-        max-width: 70%;
-    }
 
-    #overlay{
-        max-width: 60%;
-    }
-
-    .main-header h1 {
-        font-size: 2rem;
-    }
-    .main-header p {
-        font-size: 1.5rem;
-    }
-
-    .main-header{
-        padding: 1.5rem 0.5rem;
+    #back-button {
+        display: block;
+        margin: 10px auto;
+        padding: 12px 24px;
+        font-size: 1.1em;
     }
 }
 
@@ -131,21 +132,6 @@ p {
         grid-template-columns: 1fr;
     }
 
-     #coffee-image{
-        max-width: 70%;
-    }
-
-    #overlay{
-        max-width: 60%;
-    }
-
-    .main-header h1 {
-        font-size: 1.8rem;
-    }
-
-    .main-header p {
-        font-size: 1.1rem;
-    }
 
     #back-button {
         display: block;

@@ -33,7 +33,7 @@ fetch("https://api.sampleapis.com/coffee/hot")
             coffeeType.appendChild(coffeeInformation);
             coffeeInformation.style.display = 'none';
 
-            let descriptionHeader = document.createElement('h3');
+            let descriptionHeader = document.createElement('h2');
             descriptionHeader.id = 'description-header';
             descriptionHeader.innerText = 'Description';
             coffeeInformation.appendChild(descriptionHeader);
