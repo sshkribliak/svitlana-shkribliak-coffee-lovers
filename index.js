@@ -14,8 +14,9 @@ fetch("https://api.sampleapis.com/coffee/hot")
     .then(coffee => {
         console.log(coffee);
         let coffeeSection = document.getElementById('coffee-types');
-        for (let i = 0; i < coffee.length; i++) {
+        for (let i = 0; i < 18; i++) {  // replace 18 with the "coffee.length" to see all items currently available in the API source - in development
             let coffeeType = document.createElement('div');
+            coffeeType.className = 'coffeeType';
             let coffeeTitle = document.createElement('h2');
             coffeeTitle.innerText = coffee[i].title;
             coffeeSection.appendChild(coffeeType);
@@ -45,20 +46,36 @@ fetch("https://api.sampleapis.com/coffee/hot")
             let backButton = document.createElement('button');
             backButton.type = 'button';
             backButton.id = 'back-button';
-            backButton.innerText= 'Back';
+            backButton.innerText = 'Back';
             coffeeInformation.appendChild(backButton);
+
+            let overlay = document.createElement('div');
+            overlay.id = 'overlay';
+            overlay.innerHTML = 'Tap to see description';
+            coffeeType.appendChild(overlay);
 
             coffeeImage.addEventListener('click', () => {
                 coffeeImage.style.display = 'none';
                 coffeeInformation.style.display = 'block';
-                backButton.style.display = 'inline';
+                backButton.style.display = 'block';
+                overlay.style.display = 'none';
 
             })
 
             backButton.addEventListener('click', () => {
-                coffeeImage.style.display = 'inline';
+                coffeeImage.style.display = 'block';
                 coffeeInformation.style.display = 'none';
                 backButton.style.display = 'none';
+                overlay.style.display = 'block';
             })
         }
     })
+
+let today = new Date();
+let thisYear = today.getFullYear();
+
+const footer = document.querySelector('footer');
+let copyright = document.createElement('p');
+copyright.innerHTML = `&copy; Svitlana Shkribliak ${thisYear}`;
+copyright.classList.add('copyright');
+footer.appendChild(copyright);

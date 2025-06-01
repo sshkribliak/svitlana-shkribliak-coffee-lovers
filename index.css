@@ -13,21 +13,45 @@ p {
     padding: 20px;
 }
 
+.coffeeType {
+    position: relative;
+    display: inline-block;
+    place-items: center;
+}
+
 #coffee-image {
-    max-width: 75%;
+    max-width: 65%;
     height: auto;
     border-radius: 30px 15px;
     border: 1px solid #c19e79;
     box-shadow: 0 6px 12px #604427;
     cursor: pointer;
+    display: block;
+    width: 100%;
 }
 
 #coffee-image:hover {
     transform: scale(1.05);
 }
 
+#overlay {
+    max-width: 60%;
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 4px;
+    font-size: 0.9em;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 #information {
-    max-width: 75%;
+    max-width: 65%;
     height: auto;
     text-align: justify;
 }
@@ -48,12 +72,21 @@ p {
     transform: scale(1.05);
 }
 
+#footer {
+    text-align: center;
+    border: 1px solid #6b4837;
+    background-color: #6b4837;
+    color: #fffbea;
+    border-radius: 5px;
+}
+
 .main-header {
     background-color: #6b4837;
     color: #fffbea;
     text-align: center;
     padding: 2rem 1rem;
     font-family: 'Georgia', serif;
+    border-radius: 5px;
 }
 
 .main-header h1 {
@@ -68,13 +101,28 @@ p {
     font-style: italic;
 }
 
+
 @media (max-width: 1024px) {
     #coffee-types {
         grid-template-columns: 1fr 1fr;
     }
+    #coffee-image{
+        max-width: 70%;
+    }
+
+    #overlay{
+        max-width: 60%;
+    }
 
     .main-header h1 {
-        font-size: 1rem;
+        font-size: 2rem;
+    }
+    .main-header p {
+        font-size: 1.5rem;
+    }
+
+    .main-header{
+        padding: 1.5rem 0.5rem;
     }
 }
 
@@ -83,12 +131,20 @@ p {
         grid-template-columns: 1fr;
     }
 
+     #coffee-image{
+        max-width: 70%;
+    }
+
+    #overlay{
+        max-width: 60%;
+    }
+
     .main-header h1 {
         font-size: 1.8rem;
     }
 
     .main-header p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     #back-button {
