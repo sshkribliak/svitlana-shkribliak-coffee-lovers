@@ -1,3 +1,11 @@
+fetch("https://api.sampleapis.com/coffee/hot")
+    .then(resp => resp.json())
+    .then(hotCoffee => console.log(hotCoffee));
+
+fetch("https://api.sampleapis.com/coffee/iced")
+    .then(resp => resp.json())
+    .then(icedCoffee => console.log(icedCoffee));
+
 const coffeeSection = document.getElementById('coffee-types');
 const hotButton = document.getElementById('hot-button');
 const icedButton = document.getElementById('iced-button');
