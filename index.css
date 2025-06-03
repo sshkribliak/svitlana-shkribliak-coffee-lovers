@@ -73,9 +73,9 @@ p {
 
 #overlay {
     position: absolute;
-    top: 50%;
+    top: 40%; 
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%); 
 
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -148,6 +148,10 @@ p {
         padding: 12px 24px;
         font-size: 1.1em;
     }
+        #overlay {
+        font-size: 14px;
+        padding: 3px 6px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -161,5 +165,9 @@ p {
         margin: 10px auto;
         padding: 12px 24px;
         font-size: 1.1em;
+    }
+        #overlay {
+        font-size: 14px;
+        padding: 3px 6px;
     }
 }
